@@ -1,0 +1,29 @@
+{
+  "name": "alamid-api-client",
+  "version": "0.1.0",
+  "description": "Abstracting transports to a remote API",
+  "main": "./lib/request.js",
+  "scripts": {
+    "test": "mocha -R spec --recursive",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha"
+  },
+  "keywords": [
+    "alamid",
+    "api",
+    "client",
+    "request",
+    "response",
+    "browserify",
+    "websocket",
+    "spdy",
+    "http"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peerigon/alamid-api-client.git"
+  },
+  "author": "peerigon <developers@peerigon.com>",
+  "license": "Unlicense"
+}
