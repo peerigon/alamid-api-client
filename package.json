@@ -1,8 +1,8 @@
 {
   "name": "alamid-api-client",
   "version": "0.1.0",
-  "description": "Abstracting transports to a remote API",
-  "main": "./lib/request.js",
+  "description": "Abstracts transports to a remote REST-API",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "mocha -R spec --recursive",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha"
