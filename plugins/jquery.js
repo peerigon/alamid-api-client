@@ -1,6 +1,6 @@
 "use strict";
 
-var copy = require("../lib/copy.js");
+var obj = require("../lib/obj.js");
 
 function jqueryPlugin(api, config) {
     var $ = config.$;
@@ -10,10 +10,15 @@ function jqueryPlugin(api, config) {
     config.settings.contentType = config.settings.contentType || "application/json; charset=utf-8";
 
     function request(method, url, data, callback) {
-        var settings = copy(config.settings);
+        var settings = obj.copy(config.settings);
 
         settings.type = method.toUpperCase();
-        settings.data = data;
+        if (data !== null) {
+            if (method !== "get" && settings.contentType.indexOf("application/json") > -1) {
+                data = JSON.stringify(data);
+            }
+            settings.data = data;
+        }
 
         $.ajax(base + url, settings)
             .done(function onHttpSuccess(data) {

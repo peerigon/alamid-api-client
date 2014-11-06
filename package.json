@@ -1,7 +1,7 @@
 {
   "name": "alamid-api-client",
   "version": "0.1.0",
-  "description": "Abstracts transports to a remote REST-API",
+  "description": "Abstracts transports to a remote API",
   "main": "./lib/index.js",
   "scripts": {
     "test": "mocha -R spec --recursive",
@@ -18,7 +18,9 @@
     "spdy",
     "http"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "path-to-url": "^0.1.0"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
