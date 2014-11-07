@@ -14,8 +14,8 @@ function jqueryPlugin(api, config) {
         deliver: function transport(method, url, data, callback) {
             var settings = obj.copy(config.settings);
 
-            settings.type = method.toUpperCase();
-            if (method !== "get" && settings.contentType.indexOf("application/json") > -1) {
+            settings.type = method;
+            if (method !== "GET" && settings.contentType.indexOf("application/json") > -1) {
                 data = JSON.stringify(data);
             }
             settings.data = data;
