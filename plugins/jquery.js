@@ -3,7 +3,7 @@
 var obj = require("../lib/obj.js");
 
 function jqueryPlugin(api, config) {
-    var $ = config.$;
+    var $ = config.jQuery;
     var base = config.base || "";
 
     config.settings = config.settings || {};
