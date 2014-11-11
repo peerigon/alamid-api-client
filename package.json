@@ -19,8 +19,8 @@
     "http"
   ],
   "dependencies": {
-    "path-to-url": "^0.1.0",
-    "routes": "git://github.com/motherjones/routes.js#feature/dict_to_array"
+    "i40": "^1.0.0",
+    "path-to-url": "^0.1.0"
   },
   "devDependencies": {},
   "repository": {
