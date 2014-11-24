@@ -11,8 +11,11 @@ function jqueryPlugin(api, config) {
 
     api.transports.push({
         name: "http",
-        deliver: function transport(method, url, data, callback) {
+        deliver: function transport(req, callback) {
             var settings = obj.copy(config.settings);
+            var method = req.method;
+            var url = req.url;
+            var data = req.body;
 
             settings.type = method;
             if (method !== "GET" && settings.contentType.indexOf("application/json") > -1) {
